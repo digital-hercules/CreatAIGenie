@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:orientation="vertical"
+    tools:context=".Privacy_three_policies">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color03"/>
+
+    <TextView
+        android:id="@+id/privacy_payment_gateway"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:background="@drawable/border_bottom"
+        android:fontFamily="@font/lora_regular"
+        android:padding="10dp"
+        android:text="Privacy Policy"
+        android:textSize="20.sp" />
+
+    <TextView
+        android:id="@+id/terms_payment_gateway"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:textSize="20.sp"
+        android:padding="10dp"
+        android:fontFamily="@font/lora_regular"
+        android:text="Terms and Conditions*" />
+
+    <TextView
+        android:id="@+id/cancellation_payment_gateway"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="20.sp"
+        android:background="@drawable/border_bottom"
+        android:fontFamily="@font/lora_regular"
+        android:text="Cancellation Policy"
+        android:layout_weight="0.3" />
+</LinearLayout>

@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:keepScreenOn="true"
+    tools:context=".ChatActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/back"
+            android:padding="8dp"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:id="@+id/ivVolume"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/volume"
+            android:padding="8dp"
+            app:tint="@color/black" />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+       <!-- <androidx.core.widget.NestedScrollView
+            android:layout_above="@+id/ivScroll"
+            android:id="@+id/nvScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">-->
+
+            <LinearLayout
+                android:id="@+id/llMain"
+                android:layout_width="match_parent"
+                android:layout_above="@+id/ivScroll"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:padding="8dp"
+                            android:src="@drawable/logo"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hi"
+                            android:textSize="16dp"
+                            android:padding="10dp"
+                            android:background="@drawable/bg_round_corners_gradiant"
+                            android:backgroundTint="@color/et_color"
+                            android:textColor="@color/black_text"
+                            android:fontFamily="@font/poppins_regular"/>
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginVertical="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:padding="8dp"
+                            android:src="@drawable/logo"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hi1"
+                            android:textSize="16dp"
+                            android:padding="10dp"
+                            android:background="@drawable/bg_round_corners_gradiant"
+                            android:backgroundTint="@color/et_color"
+                            android:textColor="@color/black_text"
+                            android:fontFamily="@font/poppins_regular"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+
+             <!--   <ImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"/>-->
+
+            </LinearLayout>
+
+<!--        </androidx.core.widget.NestedScrollView>-->
+
+        <LinearLayout
+            android:layout_above="@+id/llBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/switch_to_web"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:switchMinWidth="56dp"
+                android:text=""
+                android:checked="false"
+                app:trackTint="@color/switch_track_selector"
+                />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivScroll"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/drop_down"
+            android:padding="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/llBottom"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bg_round"
+            app:tint="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/llBottom"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_round_corner_black"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/llScroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/output_in"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="@color/black"/>
+
+                        <Spinner
+                            android:id="@+id/spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+
+
+
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tone"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="@color/black"/>
+
+                        <Spinner
+                            android:id="@+id/spinnerTone"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:weightSum="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/writing_style"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="@color/black"/>
+
+                        <Spinner
+                            android:id="@+id/spinnerWritingStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/keyword"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="@color/black"/>
+
+                        <EditText
+                            android:id="@+id/etKeyword"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:singleLine="true"
+                            android:textSize="12dp"
+                            android:padding="3dp"
+                            android:textColor="@color/black_text"
+                            android:textColorHint="@color/gray"
+                            android:background="@drawable/bg_round_corners_gradiant"
+                            android:backgroundTint="@color/et_color"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvSuggestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="@string/suggestion"
+                    android:layout_alignParentRight="true"
+                    android:layout_above="@id/llBottom"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="right"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center"
+                    android:textSize="16dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_round_corners_gradiant"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:gravity="center"
+                >
+                <TextView
+                    android:id="@+id/tvMessageCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You have 5 message left."
+                    android:textSize="12dp"
+                    android:padding="2dp"
+                    />
+                <TextView
+                    android:id="@+id/tvMoreMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/more_message"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/gold"
+                    android:padding="2dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_round_corners_gradiant"
+                android:backgroundTint="@color/et_color"
+                android:layout_margin="10dp"
+                >
+
+                <EditText
+                    android:id="@+id/etText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="@string/write_your_message"
+                    android:maxLines="5"
+                    android:padding="15dp"
+                    android:textColor="@color/black_text"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:id="@+id/ivLoading"
+                    android:visibility="gone"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/loading_text"
+                    android:rotation="180"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="10dp"
+                    android:padding="8dp"
+                    app:tint="@color/white" />
+
+
+                <ImageView
+                    android:id="@+id/ivSend"
+                    android:visibility="gone"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/back"
+                    android:rotation="180"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_round"
+                    android:padding="8dp"
+                    app:tint="@color/white" />
+
+                <ImageView
+                    android:id="@+id/ivCamera"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/camera"
+                    android:padding="10dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_round"
+                    app:tint="@color/white" />
+
+                <ImageView
+                    android:id="@+id/ivSpeak"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/mic"
+                    android:padding="10dp"
+                    android:layout_gravity="bottom"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_round"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvStop"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="@string/stop_generate"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/llBottom"
+            android:layout_margin="5dp"
+            android:paddingHorizontal="10dp"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_round_corners_gradiant"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

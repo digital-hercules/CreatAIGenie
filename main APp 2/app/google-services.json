@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "81531067987",
+    "firebase_url": "https://tarancoronaform-9a1a9-default-rtdb.firebaseio.com",
+    "project_id": "tarancoronaform-9a1a9",
+    "storage_bucket": "tarancoronaform-9a1a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81531067987:android:97d3da35c90c17fa8470a6",
+        "android_client_info": {
+          "package_name": "com.ai.genie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "81531067987-tsborkb4lhpc2jd22um86gv3lk8l7m47.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXwvD_vJ1RFkYCcpTqT5Q3isv8xiGCTUk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "81531067987-tsborkb4lhpc2jd22um86gv3lk8l7m47.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81531067987:android:b23ee9df5c721f768470a6",
+        "android_client_info": {
+          "package_name": "com.example.mygenerativeaiapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "81531067987-tsborkb4lhpc2jd22um86gv3lk8l7m47.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXwvD_vJ1RFkYCcpTqT5Q3isv8xiGCTUk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "81531067987-tsborkb4lhpc2jd22um86gv3lk8l7m47.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    tools:context="com.ai.genie.inapprewardsysytem.inapprewardsysytem.Daily_Rewards"
+        android:layout_height="600dp"
+    android:layout_marginTop="40dp"
+        android:background="@drawable/shape"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+    <TextView
+        android:id="@+id/pointsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Points: 0"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"/>
+  <!--  <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/streakrecshowid"
+        android:layout_height="wrap_content"
+        android:text="streak:0" />-->
+
+
+    <ImageButton
+        android:id="@+id/closedailyrewards"
+        android:layout_width="62dp"
+        android:layout_height="42dp"
+        android:layout_gravity="top"
+        android:background="@color/background_purple"
+        android:src="@drawable/clear"
+        app:tint="@color/dark_purple"
+
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daily Reward"
+            android:textColor="#000000"
+            android:fontFamily="@font/orelegaone_regular"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+
+    <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="3"
+            android:alignmentMode="alignMargins"
+            android:padding="8dp"
+            android:layout_gravity="center">
+
+            <!-- Day 1 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:orientation="vertical"
+                android:background="@drawable/shape"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_margin="4dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/dollar_coins_icon"
+                    android:contentDescription="Coins" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Day 1"
+                    android:fontFamily="@font/orelegaone_regular"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- Day 2 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:orientation="vertical"
+                android:background="@drawable/shape"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_margin="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Day 2"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/orelegaone_regular"
+
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="500 Points"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- Day 3 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:orientation="vertical"
+                android:background="@drawable/shape"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_margin="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Day 3"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/orelegaone_regular"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="500 Points"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- Day 4 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="82dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:background="@drawable/shape"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Day 4"
+                    android:fontFamily="@font/orelegaone_regular"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Points"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Day 5 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:orientation="vertical"
+                android:background="@drawable/shape"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_margin="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Day 5"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/orelegaone_regular"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Points"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- Day 6 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:orientation="vertical"
+                android:background="@drawable/shape"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_margin="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Day 6"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/orelegaone_regular"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Points"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+            </LinearLayout>
+        </GridLayout>
+
+        <!-- Day 7 -->
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="4dp"
+        android:background="@drawable/shape"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/orelegaone_regular"
+            android:gravity="center_vertical"
+            android:text="Day 7"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/excellence_honor"
+            app:tint="@color/dark_purple" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:fontFamily="@font/orelegaone_regular"
+            android:gravity="center"
+            android:text="BIG REWARD"
+            android:textColor="@color/dark_purple"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:text="Checking reward status..."
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:background="@drawable/shape"
+            android:padding="8dp"
+            android:id="@+id/rewardStatusCheck"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/dark_purple"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/redeemnowbuttondailyreward6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#E7FF00"
+            android:text="REDEEM NOW"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ChatActivity"
+    android:keepScreenOn="true">
+
+
+    <LinearLayout
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center_vertical"
+       >
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="5dp"
+            android:src="@drawable/baseline_arrow_back_ios_new_24"
+            app:tint="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/all_in_one_gpt"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_weight="1"
+            android:id="@+id/nvScroll"
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:id="@+id/llMain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/light_gray_01"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:background="@color/light_gray"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:padding="8dp"
+                            android:src="@drawable/logo"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hi"
+                            android:textSize="16dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins_regular"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/light_gray_01"/>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                  />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/llResolution"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="5dp"
+        android:weightSum="3"
+       >
+
+        <RadioGroup
+            android:id="@+id/resolutionRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/resolution256"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:checked="true"
+                android:textColor="@color/text_selector"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/radio_button_selector"
+                android:layout_height="wrap_content"
+                android:text="256x256"/>
+
+            <RadioButton
+                android:id="@+id/resolution512"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:textColor="@color/text_selector"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginHorizontal="8dp"
+                android:background="@drawable/radio_button_selector"
+                android:layout_height="wrap_content"
+                android:text="512x512"/>
+
+            <RadioButton
+                android:id="@+id/resolution1024"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:textColor="@color/text_selector"
+                android:textStyle="bold"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/radio_button_selector"
+                android:layout_height="wrap_content"
+                android:text="1024x1024"/>
+        </RadioGroup>
+
+    </LinearLayout>
+    <View
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray_01"/>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/MyTextInputLayoutTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/user_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="Enter your prompt here"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <ImageView
+            android:id="@+id/sendbtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/send"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

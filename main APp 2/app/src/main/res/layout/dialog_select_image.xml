@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/card_white"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:id="@+id/llCamera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="5dp"
+        android:background="@drawable/bg_round_corner"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/camera"
+            android:padding="6dp"
+            android:background="@drawable/bg_round_corners_gradiant"
+            android:backgroundTint="@color/light_gray_01"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/camera"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:textSize="16dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/poppins_regular"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="5dp"
+        android:background="@drawable/bg_round_corner"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_camera_24"
+            android:padding="6dp"
+            android:background="@drawable/bg_round_corners_gradiant"
+            android:backgroundTint="@color/light_gray_01"
+            app:tint="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/gallery"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:textSize="16dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/poppins_regular"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

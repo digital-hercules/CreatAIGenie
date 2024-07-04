@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/brand_voice"
+            android:textColor="@color/black"
+            android:padding="6dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textSize="18dp"
+            android:fontFamily="@font/bold"
+            />
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/back"
+            android:padding="8dp"
+            android:layout_centerVertical="true"
+            app:tint="@color/black" />
+
+
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:padding="16dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/brand_voice_company"
+                android:fontFamily="@font/lora_bold"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:padding="3dp"
+                android:textColor="@color/main_color"/>
+
+            <ImageView
+                android:id="@+id/ivImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/brand_voice"
+                />
+
+            <LinearLayout
+                android:layout_above="@+id/llBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/use_personalised_brand_voice"
+                    android:textColor="@color/main_color"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/poppins_regular"/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:switchMinWidth="56dp"
+                    android:text=""
+                    android:checked="false"
+                    app:trackTint="@color/switch_track_selector"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/brand_name"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textAllCaps="false"/>
+
+
+                <EditText
+                    android:id="@+id/etBrandName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_round_corner_emty"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="@string/enter_brand_name"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:padding="12dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="16dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/objective"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textAllCaps="false"/>
+
+
+                <EditText
+                    android:id="@+id/etObjective"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_round_corner_emty"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="@string/enter_objective"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:padding="12dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/brand_theme"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textAllCaps="false"/>
+
+
+                <EditText
+                    android:id="@+id/etBrandTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_round_corner_emty"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="@string/enter_brand_theme"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:padding="12dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/other_detail"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textAllCaps="false"/>
+
+
+                <EditText
+                    android:id="@+id/etOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_round_corner_emty"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="@string/enter_other_detail"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"
+                    android:inputType="textEmailAddress"
+                    android:padding="12dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="16dp" />
+
+
+
+                <TextView
+                    android:id="@+id/registerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bg_round_corner_black"
+                    android:text="@string/create"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="20dp"
+                    android:drawableRight="@drawable/next1"
+                    android:drawableTint="@color/black"
+                    android:drawablePadding="10dp"
+                    android:textSize="18dp"
+                    android:paddingHorizontal="20dp"
+                    android:fontFamily="@font/poppins_regular"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="20dp"
+    android:background="@color/main_color">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/introduction_page3"
+        android:fontFamily="@font/bold"
+        android:textSize="24dp"
+        android:padding="5dp"
+        android:textColor="@color/white"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:src="@drawable/page3"
+            android:layout_gravity="center"
+            />
+<!--
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/page11"
+            android:layout_gravity="center"
+            />-->
+
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/introduction_desc_page3"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="16dp"
+        android:padding="5dp"
+        android:layout_marginVertical="20dp"
+        android:gravity="center"
+        android:textColor="@color/white"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="horizontal">
+
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginHorizontal="2dp"
+            android:background="@drawable/bg_round"
+            android:backgroundTint="@color/white"
+            />
+        <View
+            android:layout_width="30dp"
+            android:layout_height="8dp"
+            android:layout_marginHorizontal="2dp"
+            android:background="@drawable/bg_round"
+            android:backgroundTint="@color/white"
+            />
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginHorizontal="2dp"
+            android:background="@drawable/bg_round"
+            android:backgroundTint="@color/white"
+            />
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginHorizontal="2dp"
+            android:background="@drawable/bg_round"
+            android:backgroundTint="@color/white"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/skip"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/white_text"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginHorizontal="5dp"
+            android:src="@drawable/next"/>
+    </LinearLayout>
+
+
+</LinearLayout>

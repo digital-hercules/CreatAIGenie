@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.home.view.TextToVideoActivity"
+    android:keepScreenOn="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_to_video"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:padding="6dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textSize="18dp"
+            android:fontFamily="@font/poppins_regular"
+            />
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/back"
+            android:padding="8dp"
+            android:layout_centerVertical="true"
+            app:tint="@color/black" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_gradiant"
+                android:orientation="vertical"
+                android:backgroundTint="@color/et_color">
+                <EditText
+                    android:id="@+id/etText"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="@string/write_your_message"
+                    android:background="@android:color/transparent"
+                    android:maxLines="5"
+                    android:padding="15dp"
+                    android:textIsSelectable="true"
+                    android:gravity="left"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/ivRefresh"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/regenerate"
+                        android:padding="5dp"
+                        app:tint="@color/black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0/150"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textSize="12dp"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:layout_marginVertical="10dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_gradiant"
+                    android:backgroundTint="@color/et_color"
+                    android:padding="5dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/text_video"
+                        android:padding="5dp"
+                        app:tint="@color/black" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add Photos "
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:padding="6dp"
+                        android:textSize="15dp"
+                        android:fontFamily="@font/poppins_regular"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_gradiant"
+                    android:backgroundTint="@color/et_color"
+                    android:padding="5dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/copy1"
+                        android:padding="5dp"
+                        app:tint="@color/black" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Add Link"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:padding="6dp"
+                        android:textSize="15dp"
+                        android:fontFamily="@font/poppins_regular"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="4dp"
+                android:elevation="4dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Video  resolution"
+                        android:textColor="@color/black"
+                        android:padding="3dp"
+                        android:gravity="center"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/poppins_regular"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="5dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="1080p"
+                            android:textColor="@color/white"
+                            android:padding="3dp"
+                            android:background="@drawable/bg_round_corners_gradiant"
+                            android:backgroundTint="@color/main_color"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/poppins_regular"
+                            />
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="240p"
+                            android:textColor="@color/black"
+                            android:padding="3dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/poppins_regular"
+                            />
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="480p"
+                            android:textColor="@color/black"
+                            android:padding="3dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/poppins_regular"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="5dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="720p"
+                            android:textColor="@color/black"
+                            android:padding="3dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/poppins_regular"
+                            />
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2160p"
+                            android:textColor="@color/black"
+                            android:padding="3dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/poppins_regular"
+                            />
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="4320p"
+                            android:textColor="@color/black"
+                            android:padding="3dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/poppins_regular"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="4dp"
+                android:elevation="4dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Videos"
+                        android:textColor="@color/black"
+                        android:padding="3dp"
+                        android:gravity="center"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/poppins_regular"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="5dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                >
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/video_img1"/>
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/video_icon"
+                                    android:layout_gravity="center"
+                                    app:tint="@color/white" />
+
+                            </FrameLayout>
+                           <TextView
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Normal Video"
+                                android:textColor="@color/black"
+                                android:padding="3dp"
+                                android:layout_gravity="center"
+                               android:textSize="12dp"
+                                android:fontFamily="@font/poppins_regular"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                >
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/video_img2"/>
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/video_icon"
+                                    android:layout_gravity="center"
+                                    app:tint="@color/white" />
+
+                            </FrameLayout>
+                            <TextView
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="AI Video"
+                                android:textColor="@color/black"
+                                android:padding="3dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="12dp"
+                                android:fontFamily="@font/poppins_regular"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                >
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/video_img3"/>
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/video_icon"
+                                    android:layout_gravity="center"
+                                    app:tint="@color/white" />
+
+                            </FrameLayout>
+                            <TextView
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Real Videos"
+                                android:textColor="@color/black"
+                                android:padding="3dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="12dp"
+                                android:fontFamily="@font/poppins_regular"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_round_corners_gradiant"
+                    android:backgroundTint="@color/main_color"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="10dp"
+                    android:padding="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ic_delete"
+                        android:padding="5dp"
+                        app:tint="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_round_corner_emty"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="10dp"
+                    android:padding="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/mark"
+                        android:padding="5dp"
+                        app:tint="@color/main_color" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_round_corner_emty"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="10dp"
+                    android:padding="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/share2"
+                        android:padding="5dp"
+                        app:tint="@color/main_color" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/bg_round_corners_gradiant"
+                android:backgroundTint="@color/main_color"
+                android:text="@string/generate_to_music"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginVertical="20dp"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

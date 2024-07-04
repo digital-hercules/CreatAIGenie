@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.home.view.ChatWithImageActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/chat_with_image"
+            android:textColor="@color/black"
+            android:padding="6dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textSize="18dp"
+            android:fontFamily="@font/bold"
+            />
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/back"
+            android:padding="8dp"
+            android:layout_centerVertical="true"
+            app:tint="@color/black" />
+
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChat"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/llAddImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_gradiant"
+                android:backgroundTint="@color/et_color"
+                android:padding="5dp"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/image_icon"
+                    android:padding="5dp"
+                    app:tint="@color/black_text" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Image"
+                    android:textColor="@color/black_text"
+                    android:padding="6dp"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/poppins_regular"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llPasteLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_gradiant"
+                android:backgroundTint="@color/et_color"
+                android:padding="5dp"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/link"
+                    android:padding="5dp"
+                    app:tint="@color/black_text" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add Link"
+                    android:textColor="@color/black_text"
+                    android:padding="6dp"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/poppins_regular"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/llMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/tvMessageCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You have 5 message left."
+                android:textSize="12dp"
+                android:padding="2dp"
+                />
+            <TextView
+                android:id="@+id/tvMoreMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/more_message"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:textColor="@color/gold"
+                android:padding="2dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            >
+
+            <EditText
+                android:id="@+id/etText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/bg_round_corners_gradiant"
+                android:backgroundTint="@color/et_color"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="@string/write_your_message"
+                android:maxLines="5"
+                android:padding="15dp"
+                android:textColor="@color/black_text"
+                android:textColorHint="@color/hint_color"
+                android:textSize="16dp" />
+
+
+
+            <ImageView
+                android:id="@+id/ivSend"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/back"
+                android:rotation="180"
+                android:layout_gravity="bottom"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_round"
+                android:padding="8dp"
+                app:tint="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

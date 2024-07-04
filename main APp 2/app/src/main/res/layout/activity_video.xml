@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/video_editor"
+            android:textAllCaps="true"
+            android:textColor="@color/text_color"
+            android:padding="6dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:fontFamily="@font/poppins_regular"
+            />
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/back"
+            android:padding="8dp"
+            app:tint="@color/icon_color" />
+
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:padding="20dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/btnVideoEditor"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/color2"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:backgroundTint="@color/color2"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/movie_camera"
+                        app:tint="@color/icon_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/default1"
+                        android:gravity="center"
+                        android:textColor="@color/text_color"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/poppins_regular"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/btnPiPVideoEditor"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/color1"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:backgroundTint="@color/color2"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/movie_camera"
+                        app:tint="@color/icon_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pip"
+                        android:textColor="@color/text_color"
+                        android:textSize="14dp"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppins_regular"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/btnDraftsVideoEditor"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/color3"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:backgroundTint="@color/color3"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/movie_camera"
+                        app:tint="@color/icon_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/drafts"
+                        android:gravity="center"
+                        android:textColor="@color/text_color"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/poppins_regular"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/btnSlideShowVideoEditorTrimmer"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/color4"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:backgroundTint="@color/color4"
+
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/movie_camera"
+                        app:tint="@color/icon_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/trimmer"
+                        android:textColor="@color/text_color"
+                        android:textSize="14dp"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppins_regular"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+ <!--
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnVideoEditor"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:text="Open Video Editor - Default"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnPiPVideoEditor"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPiPVideoEditor"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Open Video Editor - PiP"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnDraftsVideoEditor"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVideoEditor"
+        app:layout_constraintVertical_bias="0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDraftsVideoEditor"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Open Video Editor - Drafts"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSlideShowVideoEditorTrimmer"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPiPVideoEditor"
+        app:layout_constraintVertical_bias="0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSlideShowVideoEditorTrimmer"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Open Video Editor - Trimmer"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDraftsVideoEditor"
+        app:layout_constraintVertical_bias="0" />
+-->
+    <TextView
+        android:id="@+id/licenseStateView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:textColor="@color/red"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</LinearLayout>

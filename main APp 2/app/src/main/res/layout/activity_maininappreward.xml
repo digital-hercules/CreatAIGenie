@@ -1,0 +1,183 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="550dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/shape"
+    android:padding="16dp"
+    app:circularflow_radiusInDP="10dp"
+    android:layout_marginTop="100dp"
+    tools:context="com.ai.genie.inapprewardsysytem.inapprewardsysytem.MactivityInApp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/arrow_back"
+            app:tint="@color/dark_purple" />
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="My Rewards"
+
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/rewards_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/excellence_honor_icon"
+            app:tint="@color/dark_purple" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/black"
+        android:layout_below="@id/top_bar"
+        android:layout_marginTop="5dp" />
+
+    <!-- Points Section -->
+    <LinearLayout
+        android:id="@+id/points_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/top_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/my_points_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MY COINS"
+            android:textColor="#AB47BC"
+            android:textSize="25sp"
+            android:fontFamily="@font/orelegaone_regular"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/circlecompleteblack"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/medium_purple">
+
+           <TextView
+               android:id="@+id/uniqueone"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="points earned"
+               android:textColor="@color/Gold"
+               android:fontFamily="@font/orelegaone_regular"
+               android:textSize="23sp"
+               />
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Menu Options -->
+    <LinearLayout
+        android:id="@+id/menu_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/points_section"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:backgroundTint="@color/dark_purple"
+            android:clickable="true"
+            android:drawableEnd="@drawable/arrow_rightrewards"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="Upgrade"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_black"
+            android:layout_below="@id/top_bar"
+            android:layout_marginTop="1dp" />
+
+        <TextView
+            android:id="@+id/Get_daily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawableEnd="@drawable/arrow_rightrewards"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="Get Daily Points"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_black"
+            android:layout_below="@id/top_bar"
+            android:layout_marginTop="1dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:text="under Development"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Invite Friends to win rewards"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:fontFamily="@font/poppins_medium"
+            android:id="@+id/frnd_invite"
+            android:drawableEnd="@drawable/arrow_rightrewards"
+            android:gravity="center_vertical"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_black"
+            android:layout_below="@id/top_bar"
+            android:layout_marginTop="1dp" />
+
+    </LinearLayout>
+</RelativeLayout>

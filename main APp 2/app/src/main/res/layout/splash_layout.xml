@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:layout_width="fill_parent"
+    android:background="@color/bgColor"
+    android:layout_height="fill_parent">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:background="@color/lite_transparent"
+        app:layout_constraintBottom_toTopOf="@id/layoutSplash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backgroundView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true" />
+
+        <com.ai.genie.ui.features.featuresfoto.splash.SplashView
+            android:id="@+id/splashView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true" />
+
+        <RelativeLayout
+            android:id="@+id/loadingView"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:elevation="200.0dip">
+
+            <com.agrawalsuneet.dotsloader.loaders.AllianceLoader
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:alliance_animDuration="500"
+                app:alliance_distanceMultiplier="3"
+                app:alliance_dotsRadius="10.0dip"
+                app:alliance_drawOnlyStroke="false"
+                app:alliance_firstDotsColor="@color/ball1"
+                app:alliance_secondDotsColor="@color/ball2"
+                app:alliance_thirdDotsColor="@color/ball3" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutSplash"
+        android:layout_width="fill_parent"
+        android:layout_height="110.0dip"
+        android:background="@color/bgColor"
+        app:layout_constraintBottom_toTopOf="@id/lineView">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSplashView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <LinearLayout
+            android:id="@+id/drawLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/undo"
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_marginStart="15.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginBottom="5.0dip"
+                    android:background="@drawable/border_circle"
+                    android:clickable="true"
+                    android:elevation="100.0dip"
+                    android:foreground="@drawable/ripple"
+                    android:paddingStart="10.0dip"
+                    android:paddingEnd="10.0dip"
+                    android:src="@drawable/ic_undo"
+                    app:layout_constraintBottom_toTopOf="@id/brushLayout"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/redo"
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_marginStart="15.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginBottom="5.0dip"
+                    android:background="@drawable/border_circle"
+                    android:clickable="true"
+                    android:foreground="@drawable/ripple"
+                    android:paddingStart="10.0dip"
+                    android:paddingEnd="10.0dip"
+                    android:src="@drawable/ic_redo"
+                    app:layout_constraintBottom_toTopOf="@id/brushLayout"
+                    app:layout_constraintStart_toEndOf="@id/undo" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent">
+
+                <SeekBar
+                    android:id="@+id/brushIntensity"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30.0dip"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="15.0dip"
+                    android:layout_marginEnd="15.0dip"
+                    android:layout_marginBottom="10.0dip"
+                    android:background="@null"
+                    android:max="150"
+                    android:progress="55"
+                    android:thumb="@drawable/custom_thumb" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/lineView"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@color/line_color"
+        app:layout_constraintBottom_toTopOf="@id/confirmToolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/confirmToolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@color/lite_transparent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="45.0dip"
+            android:layout_height="fill_parent"
+            android:clickable="true"
+            android:foreground="@drawable/ripple"
+            android:paddingStart="10.0dip"
+            android:paddingEnd="10.0dip"
+            android:src="@drawable/ic_close"
+            android:tint="@color/color_arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/draw"
+            android:layout_width="wrap_content"
+            android:layout_height="0.0dip"
+            android:gravity="center"
+            android:paddingStart="8.0dip"
+            android:paddingEnd="8.0dip"
+            android:text="Draw"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+            android:id="@+id/blurNumber"
+            android:layout_width="90.0dip"
+            android:layout_height="0.0dip"
+            android:gravity="center"
+            app:backGroundColor="@color/bgColor"
+            app:initialNumber="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/shape"
+            android:layout_width="wrap_content"
+            android:layout_height="0.0dip"
+            android:background="@drawable/border_bottom"
+            android:gravity="center"
+            android:paddingStart="8.0dip"
+            android:paddingEnd="8.0dip"
+            android:text="Shape"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgSave"
+            android:layout_width="45.0dip"
+            android:layout_height="fill_parent"
+            android:clickable="true"
+            android:foreground="@drawable/ripple"
+            android:paddingStart="10.0dip"
+            android:paddingEnd="10.0dip"
+            android:src="@drawable/yes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

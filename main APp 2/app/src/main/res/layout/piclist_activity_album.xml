@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bgColor">
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/bgColor"
+        android:minHeight="?actionBarSize"
+        android:theme="?actionBarTheme"
+        app:popupTheme="?actionBarPopupTheme"
+        app:titleTextColor="@color/white"/>
+
+    <View
+        android:id="@+id/lineView1"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_below="@id/toolbar"
+        android:background="@color/line_color" />
+
+    <GridView
+        android:id="@+id/gridViewAlbum"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/layoutBottom"
+        android:layout_below="@id/lineView1"
+        android:background="@color/lite_transparent"
+        android:gravity="center"
+        android:numColumns="1"
+        android:stretchMode="columnWidth" />
+
+    <GridView
+        android:id="@+id/gridViewListAlbum"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/lineView2"
+        android:layout_below="@id/toolbar"
+        android:background="@color/lite_transparent"
+        android:gravity="center"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/lineView2"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_above="@id/layoutBottom"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:id="@+id/layoutBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="150.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bgColor"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.0dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtTotalImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="3.0dip"
+                android:gravity="center_vertical"
+                android:padding="3.0dip"
+                android:text="@string/text_images"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/btnDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center"
+                android:layout_marginStart="2.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginEnd="5.0dip"
+                android:layout_marginBottom="5.0dip"
+                android:background="@drawable/gr_home_btn"
+                android:gravity="center"
+                android:paddingStart="30.0dip"
+                android:paddingTop="5.0dip"
+                android:paddingEnd="30.0dip"
+                android:paddingBottom="5.0dip"
+                android:text="@string/text_button_done"
+                android:textColor="#ffffffff"
+                android:textSize="14.0sp" />
+        </FrameLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="80.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10.0dip"
+            android:background="@color/lite_transparent">
+
+            <LinearLayout
+                android:id="@+id/layoutListItemSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+    </LinearLayout>
+</RelativeLayout>

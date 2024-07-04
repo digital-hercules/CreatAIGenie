@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item
+        android:id="@+id/navEditProfile"
+        android:icon="@drawable/edit"
+        android:title="@string/edit_profile" />
+    <item
+        android:id="@+id/navPlans"
+        android:icon="@drawable/plans"
+        android:title="@string/plans" />
+    <item
+        android:id="@+id/navBrandVoice"
+        android:icon="@drawable/brand_voice"
+        android:title="@string/brand_voice" />
+
+    <item
+        android:visible="false"
+        android:id="@+id/navSubscription"
+        android:icon="@drawable/vip"
+        android:title="@string/subscription" />
+
+    <item
+        android:id="@+id/navTheme"
+        android:icon="@drawable/theme"
+        android:title="@string/theme" />
+    <item
+        android:id="@+id/navHelp"
+        android:icon="@drawable/help"
+        android:title="@string/help" />
+
+    <item
+        android:id="@+id/navFeedback"
+        android:icon="@drawable/feedback"
+        android:title="@string/feedback" />
+    <item
+        android:id="@+id/navFAQ"
+        android:icon="@drawable/help"
+        android:title="@string/faq" />
+
+    <item
+        android:id="@+id/navTutorial"
+        android:icon="@drawable/tutorial"
+        android:title="@string/tutorial" />
+
+    <item
+        android:id="@+id/navShareApp"
+        android:icon="@drawable/share1"
+        android:title="@string/share_app" />
+
+    <item
+        android:id="@+id/navRateUs"
+        android:icon="@drawable/rate_us"
+        android:title="@string/rate_us" />
+
+    <item
+        android:id="@+id/navPrivacyPolicy"
+        android:icon="@drawable/privacy_policy"
+        android:title="@string/privacy_policy" />
+
+    <item
+        android:id="@+id/navAboutApp"
+        android:icon="@drawable/info"
+        android:title="@string/about_app" />
+
+    <item
+        android:id="@+id/navLogOut"
+        android:icon="@drawable/log_out"
+        android:title="@string/logout" />
+</menu>

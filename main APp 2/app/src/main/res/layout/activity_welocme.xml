@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="20dp"
+    android:background="@color/white"
+    tools:context=".ui.authentication.view.WelcomeActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name_title"
+        android:fontFamily="@font/bold"
+        android:textSize="24dp"
+        android:padding="5dp"
+        android:textColor="@color/black"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:src="@drawable/welcome"
+            android:layout_gravity="center"
+            />
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:fontFamily="@font/lora_bold"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:padding="3dp"
+        android:textColor="@color/main_color"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name_title"
+        android:fontFamily="@font/lora_bold"
+        android:textSize="34dp"
+        android:gravity="center"
+        android:padding="3dp"
+        android:textColor="@color/main_color"/>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_intro"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="16dp"
+        android:padding="5dp"
+        android:layout_marginVertical="10dp"
+        android:gravity="center"
+        android:textColor="@color/main_color"/>
+
+
+    <TextView
+        android:id="@+id/btnGetStart"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_round_corner_black"
+        android:text="@string/get_started"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:drawableRight="@drawable/next1"
+        android:drawableTint="@color/black"
+        android:drawablePadding="10dp"
+        android:textSize="18dp"
+        android:paddingHorizontal="20dp"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginTop="24dp"
+        android:textAllCaps="false"/>
+</LinearLayout>

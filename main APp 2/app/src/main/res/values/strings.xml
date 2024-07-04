@@ -1,0 +1,348 @@
+<resources>
+    <string name="app_name">CreateAIGenie: Crafted by AI, Inspired by You</string>
+    <string name="app_name_title">CreateAIGenie</string>
+    <string name="all_in_one_gpt_is_an_media_content_generator_developed_by_tpsk_and_launched_in_september_2023">CreateAIGenie is an media content generator developed by Task and launched in september 2023.</string>
+    <string name="all_in_one_gpt">CreateAIGenie</string>
+    <string name="hint">hint</string>
+    <string name="home">Home</string>
+    <string name="assistant">AI Assistants</string>
+    <string name="book">Book</string>
+    <string name="voice">Voice</string>
+    <string name="text_to_speech">Text TO Speech</string>
+    <string name="speech_rate">Speech Rate</string>
+    <string name="market_place">Market Place</string>
+    <string name="history">History</string>
+    <string name="write_your_message">Write your message</string>
+    <string name="scan_text">Scan a text</string>
+    <string name="continues">Continue</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="chat">Chat</string>
+    <string name="featured">Featured</string>
+    <string name="generate_image">Generate Image</string>
+    <string name="re_generate">Re - Generate</string>
+    <string name="image_generate">Image Generate </string>
+    <string name="generate_to_music">Generate  to Music</string>
+    <string name="generate_another_image">Generate another image</string>
+    <string name="generate_ai">Generate AI</string>
+    <string name="generated_ai">Generated AI</string>
+    <string name="view_cat">View Marketplace</string>
+    <string name="generate_image_caption">Generate Caption</string>
+    <string name="video_editor">Video Editor</string>
+    <string name="text_to_video">Text To Video</string>
+    <string name="text_to_music">Text To Music</string>
+    <string name="share_app">Share App</string>
+    <string name="share">Share</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="logout">Log Out</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="help">Help Center</string>
+    <string name="notification">Notification</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="subscription">Subscription</string>
+    <string name="plans">Plans</string>
+    <string name="feedback">Feedback</string>
+    <string name="faq">FAQ</string>
+    <string name="about_app">About App</string>
+    <string name="theme">Theme</string>
+    <string name="default1">Default</string>
+    <string name="pip">PiP</string>
+    <string name="drafts">Drafts</string>
+    <string name="trimmer">Trimmer</string>
+    <string name="others">Others</string>
+    <string name="clear">Clear</string>
+    <string name="add_cat">Generate AI</string>
+
+    <string name="instruction_description">Chat with the world\'s most advanced AI on your mobile phone and receive instant answers.</string>
+
+
+    <string name="permissions_required">Permissions Required</string>
+    <string name="cancel">Cancel</string>
+    <string name="settings">Settings</string>
+
+    <string name="denied_permission">You have forcefully denied some of the required permissions for this action. Please open settings, go to permissions and allow them.</string>
+    <string name="hi">Hi! How can I help you?</string>
+    <string name="hi1">How can I assist you?</string>
+
+
+    <string name="crop_image_activity_title"></string>
+    <string name="crop_image_menu_rotate_left">Rotate counter clockwise</string>
+    <string name="crop_image_menu_rotate_right">Rotate</string>
+    <string name="crop_image_menu_crop">Crop</string>
+    <string name="crop_image_menu_flip">Flip</string>
+    <string name="crop_image_menu_flip_horizontally">Flip horizontally</string>
+    <string name="crop_image_menu_flip_vertically">Flip vertically</string>
+
+    <string name="pick_image_intent_chooser_title">Select source</string>
+
+    <string name="crop_image_activity_no_permissions">Cancelling, required permissions are not granted</string>
+
+
+    <string name="cat1">Language Services</string>
+    <string name="cat1_sub1">Translation</string>
+    <string name="cat1_sub2">Copy Writing</string>
+    <string name="cat2">Technical Services</string>
+    <string name="cat2_sub1">Coding</string>
+    <string name="cat2_sub2">Debugging</string>
+    <string name="cat3">Business</string>
+    <string name="cat3_sub1">Business Strategies</string>
+    <string name="cat3_sub2">Ideas</string>
+    <string name="cat3_sub3">Buyer Persona</string>
+    <string name="cat3_sub4"> Case Study</string>
+    <string name="cat4">Education</string>
+    <string name="cat4_sub1">Study</string>
+    <string name="cat4_sub2">Email Template Writer</string>
+    <string name="cat4_sub3">Sentiment Analysis</string>
+    <string name="cat5">Marketing</string>
+    <string name="cat5_sub1">Marketing</string>
+    <string name="cat5_sub2">Job Application</string>
+    <string name="cat5_sub3">FAQ</string>
+    <string name="market1">Sports</string>
+    <string name="market2">Study</string>
+    <string name="market3">Media</string>
+    <string name="market4">Medical</string>
+    <string name="market5">Fitness</string>
+    <string name="market6">Travel &amp;Explore</string>
+    <string name="market7">Science &amp;Learning</string>
+    <string name="market8">Creative idea</string>
+    <string name="market9">Beauty &amp;Lifestyle</string>
+    <string name="sub_text1">After the 3-day free trail period you\'ll be change ₹480.00 per week unless you cancel before the trail expire. Weekly Subsciption is Auto-Renewable</string>
+    <string name="sub_text2">Subscription auto-renews on every 1-year unless you cancel your subscription.</string>
+
+
+    <string name="choose_your_plan">Choose your plan</string>
+    <string name="pro_plan">Pro plan</string>
+    <string name="pro_plan1">All our very best features in one package.</string>
+    <string name="starter_plan">Starter plan</string>
+    <string name="starter_plan1">For the curious who wants to get started with AI.</string>
+    <string name="word_credits">Word credits</string>
+    <string name="word_credits1">Buy individual word and image credits.</string>
+    <string name="loved">Loved by 400 000+ AI creators</string>
+    <string name="c_ontinue">Continue</string>
+    <string name="upgrade">Upgrade</string>
+    <string name="pro_plan_offer1">Everything in Starter, plus:</string>
+    <string name="pro_plan_offer2">70,000 word credits</string>
+    <string name="pro_plan_offer3">60 image credits</string>
+    <string name="pro_plan_offer4">Unlimited* Marve Chat</string>
+    <string name="pro_plan_offer5">15 videos Brand Voice</string>
+    <string name="pro_plan_offer6">Unlimited* GPT-4</string>
+    <string name="pro_plan_offer7">Unlimited Document Editor</string>
+
+    <string name="starter">Starter</string>
+    <string name="starter1">Everything in Free, plus:</string>
+    <string name="starter2">30,000 words/month</string>
+    <string name="starter3">40 Image generation</string>
+    <string name="starter4">30+ languages</string>
+    <string name="starter5">7 Brand Voice</string>
+    <string name="word1">1,000 Word Credits</string>
+    <string name="word2">Word credits are one-time purchases (no subscription) and never expires after it is purchased.</string>
+    <string name="word3">10 Extra Images</string>
+    <string name="word4">GPT-4</string>
+    <string name="word5">GPT-3.5 Turbo</string>
+    <string name="word6">Marve Chat</string>
+    <string name="word7">60+ AI Tools</string>
+    <string name="total_order">Total Order</string>
+    <string name="monthly">Monthly</string>
+    <string name="yearly">Yearly</string>
+    <string name="stop_generate">Stop generate</string>
+    <string name="suggestion">Suggestion</string>
+
+    <string name="output_in">Output In</string>
+    <string name="tone">Tone</string>
+    <string name="writing_style">Writing Style</string>
+    <string name="keyword">Keyword</string>
+
+
+    <string name="introduction">Introduction</string>
+    <string name="introduction_page2">Category Quest</string>
+    <string name="introduction_page3">Personalisation</string>
+    <string name="introduction_page4">InstaScript</string>
+    <string name="introduction_desc_page2">Generate striking visuals, engaging videos, persuasive text, expert voiceovers, and distinct music effortlessly using our feature like, Artsy.AI, Text to Speech and AI Bot text generator </string>
+    <string name="introduction_desc_page3">Unleashing the power of words, one personalized message at a time – because your conversation deserves a touch of magic.</string>
+    <string name="introduction_desc">Revolutionise communication with our advanced AI, mastering language tasks effortlessly for enhanced efficiency and seamless interaction </string>
+    <string name="introduction_desc_page4">Effortlessly generate real-time, tailored content with our AI Bot- your ultimate solution for your social media engagement . Make your  Gmail, subtitles or article article effortless and convenient. </string>
+
+
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+
+    </string-array>
+    <string name="use_most_recent">Use Most Recent</string>
+    <string name="most_trending">Most Trending</string>
+    <string name="music">Music</string>
+    <string name="see_all">See All</string>
+
+
+    <string name="action_sort">Sort</string>
+
+    <string name="all_image">All Images</string>
+    <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="bottom_sheet_behavior">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
+    <string name="brightness">Brightness</string>
+    <string name="character_counter_content_description">Characters entered %1$d of %2$d</string>
+    <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
+    <string name="character_counter_pattern">%1$d / %2$d</string>
+    <string name="chip_text">Chip text</string>
+    <string name="clear_text_end_icon_content_description">Clear text</string>
+    <string name="common_google_play_services_unknown_issue">%1$s is having trouble with Google Play services. Please try again.</string>
+    <string name="contrast">Contrast</string>
+    <string name="copy">Copy</string>
+    <string name="expand_button_title">Advanced</string>
+    <string name="exposed_dropdown_menu_content_description">Show dropwdown menu</string>
+    <string name="fab_transformation_scrim_behavior">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
+    <string name="fab_transformation_sheet_behavior">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
+    <string name="hide_bottom_view_on_scroll_behavior">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
+    <string name="icon_content_description">Dialog Icon</string>
+    <string name="label_background">Background</string>
+    <string name="label_background_full_screen">Full Screen</string>
+    <string name="label_background_height">Padding Height</string>
+    <string name="label_background_radius">Border Radius</string>
+    <string name="label_background_width">Padding Width</string>
+    <string name="label_text">Text</string>
+    <string name="label_text_fonts">Text Font</string>
+    <string name="label_text_shadow">Text Shadow</string>
+    <string name="label_text_size">Text Size</string>
+
+    <string name="not_set">Not set</string>
+    <string name="preference_copied">\"%1$s\" copied to clipboard.</string>
+    <string name="press_one_more_time">Press one more time to exit</string>
+    <string name="s1">Save image</string>
+    <string name="s2">Allow Ad to store image in Picture gallery?</string>
+    <string name="s3">Accept</string>
+    <string name="s4">Decline</string>
+    <string name="s5">Create calendar event</string>
+    <string name="s6">Allow Ad to create a calendar event?</string>
+    <string name="s7">Test Ad</string>
+    <string name="saturation">Saturation</string>
+    <string name="save">SAVE</string>
+    <string name="search_menu_title">Search</string>
+    <string name="sharpen">Sharpen</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
+    <string name="tap_to_select">Tap to select</string>
+    <string name="temp">Temp</string>
+    <string name="text_button_done">Done</string>
+    <string name="text_images">%1$d Images</string>
+    <string name="text_title_activity_album">Select photos</string>
+    <string name="text_title_dialog_sort_by_album">Sort album by</string>
+    <string name="text_title_dialog_sort_by_photo">Sort photo by</string>
+    <string name="v7_preference_off">OFF</string>
+    <string name="v7_preference_on">ON</string>
+    <string name="vignette">Vignette</string>
+
+
+    <string name="by_continuing_you_agree_to_our_privacy_policy_amp_terms_of_use">By continuing, you agree to our <b>Privacy Policy</b> &amp; <b>Terms of Use</b></string>
+    <string name="empower_creativity_through_pro_experience">Empower your creativity..</string>
+
+
+    <string name="skip">Skip</string>
+    <string name="lets_go">Let’s Go</string>
+    <string name="welcome">Welcome to</string>
+    <string name="welcome_intro">Meet AIGenie, your personal AI language model &amp; discover the benefits of using AI Genie for language tasks</string>
+    <string name="what_">What describes you best?</string>
+    <string name="get_started">Get Started</string>
+    <string name="what_describe_you_best">What describes you best?</string>
+    <string name="personal_user">Personal User</string>
+    <string name="creator">Creator</string>
+    <string name="enterprise">Enterprise</string>
+    <string name="already_have_account">Already have an account ?</string>
+    <string name="login">Login</string>
+    <string name="dont_have_an_account">Don’t have an account ?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="enter_details">Enter the details</string>
+    <string name="email_id">Email Id</string>
+    <string name="enter_email_id">Enter your email id</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="enter_phone_number">Enter your phone number</string>
+    <string name="password">Password</string>
+    <string name="enter_password">Enter your password</string>
+    <string name="fill_details">Please fill in the details ! </string>
+    <string name="full_name">Full Name</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="bio">Your Bio</string>
+    <string name="enter_bio">Tell us about yourself (optional)</string>
+    <string name="company_name">Company Name</string>
+    <string name="enter_company_name">Enter your company name</string>
+    <string name="your_role">Your Role</string>
+    <string name="enter_your_role">Enter your role</string>
+    <string name="fine_tune_model">Fine Tune Model</string>
+    <string name="using_template">Using Template</string>
+    <string name="enter_bot_details">Enter Bot Details</string>
+    <string name="bot_name">Bot Name</string>
+    <string name="enter_bot_name">Enter the bot name</string>
+    <string name="bot_category">Bot Category</string>
+    <string name="select_bot_category">Select category for your bot</string>
+    <string name="bot_model">Bot Model</string>
+    <string name="choose_bot_model">Choose model for bot</string>
+    <string name="bot_instruction">Bot Instructions</string>
+    <string name="enter_bot_instruction">Enter instructions for your bot</string>
+    <string name="create">Create</string>
+    <string name="brand_voice">Brand Voice</string>
+    <string name="brand_voice_company">Tell us about your company</string>
+    <string name="brand_name">Brand Name</string>
+    <string name="enter_brand_name">Enter your brand name</string>
+    <string name="objective">Objective</string>
+    <string name="enter_objective">Enter objectives of the brand</string>
+    <string name="brand_theme">Brand Theme</string>
+    <string name="enter_brand_theme">Enter theme of brand</string>
+    <string name="other_detail">Other details you want to add</string>
+    <string name="enter_other_detail">Express more about the brand</string>
+    <string name="general_user">General User</string>
+    <string name="choose_plan">Choose the best plan for you !</string>
+    <string name="unlimited_chat">- Unlimited Chat</string>
+    <string name="create_fine_tune">Create Fine Tune Model</string>
+    <string name="use_template">Use Template</string>
+    <string name="upload_file">Upload a File ?</string>
+    <string name="switch_to_web">Switch to Web</string>
+    <string name="use_personalised_brand_voice">Use Personalised Brand Voice </string>
+
+    <string name="chat_with_image">Chat With Image</string>
+    <string name="unlock">Unlock Unique Features</string>
+
+    <string name="profile">Profile</string>
+    <string name="more_message"><u>Get More Message</u></string>
+
+    <string name="Chat_with_bot_General">Chat with bot: 15 chats per day</string>
+    <string name="Generate_Image_General">Generate Image: 10 images per day</string>
+    <string name="Text_to_Video_general">Text to Video: 5 videos per day</string>
+    <string name="Video_and_image_editor_general">Video and Image Editor</string>
+
+    <string name="Chat_with_bot_Creator">Chat with bot: 35 chats per day</string>
+    <string name="Generate_Image_Creator">Generate Image: 15 images per day</string>
+    <string name="Text_To_Video_Creator">Text to Video: 5 videos per day</string>
+    <string name="Fine_Tune_and_Other_Templates">Fine Tune and use templates</string>
+
+    <string name="Chat_with_bot_Enterprise_Plan">Chat with bot: unlimited chats per day</string>
+    <string name="Generate_Image_Enterprise_Plan">Generate Image: unlimited images per day</string>
+    <string name="Text_To_Video_Enterprise_Plan">Text to Video: unlimited videos per day</string>
+    <string name="Custom_Chat_models_Advanced_AI_Enterprise_Plan">Custom Chat Models and Advanced AI</string>
+
+    <string name="Chat_Template">Chat Template</string>
+
+    <string name="fine_tuning">Fine-Tuning</string>
+    <string name="completed">Completed</string>
+    <string name="fine_tuning_success">Fine_Tuning_Success</string>
+    <string name="copy_api">Copy API</string>
+    <string name="embed_api">Embed API</string>
+    <string name="failed">Failed</string>
+    <string name="Retry">Retry</string>
+    <string name="Return_to_home">Return To Home</string>
+    <string name="register">Register</string>
+    <string name="price_general_user">$2</string>
+    <string name="price_creator">$15</string>
+    <string name="price_enterprise">$25</string>
+    <string name="choose_chat_template">Choose</string>
+
+
+
+    <string-array name="bot_model_options">
+        <item>Choose</item>
+        <item>Option 1</item>
+        <item>Option 2</item>
+        <item>Option 3</item>
+        <item>Option 4</item>
+    </string-array>
+
+</resources>

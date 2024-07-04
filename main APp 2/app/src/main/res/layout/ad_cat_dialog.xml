@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:padding="20dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right"
+        android:src="@drawable/close"
+        app:tint="@color/icon_color" />
+    <ImageView
+        android:id="@+id/ivVoice"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/logo"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailTextInputLayout"
+        style="@style/MyTextInputLayoutTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/gray"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/white"
+        android:hint="Enter AI Name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/MyTextInputLayoutTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/gray"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/white"
+        android:hint="Enter Instruction"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etInstruction"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/tvGenerate"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/bg_round_corners_gradiant"
+        android:text="Generate"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginTop="24dp"
+        android:textAllCaps="false"/>
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FF000000</color>
+    <color name="purple_700">#FF000000</color>
+    <color name="teal_200">#FF000000</color>
+    <color name="black">#FFFFFFFF</color>
+    <color name="white">#FF000000</color>
+    <color name="gray">#FFFFFFFF</color>
+    <color name="hint_color">#808080</color>
+    <color name="gray_01">#E8373737</color>
+    <color name="transparent">#74373737</color>
+    <color name="light_gray">#1A1A1A</color>
+    <color name="light_gray_01">#D1D1D1</color>
+    <color name="red">#CC0303</color>
+    <color name="sky_light">#E8373737</color>
+    <color name="disable_color">#676767</color>
+    <color name="icon_color">#B219F0</color>
+    <color name="text_color">#B219F0</color>
+
+    <color name="selected_text_color">#FFFFFFFF</color> <!-- Customize as needed -->
+    <color name="unselected_text_color">#FFFFFFFF</color> <!-- Customize as needed -->
+
+    <color name="color1">#191919</color>
+    <color name="color2">#191919</color>
+    <color name="color3">#191919</color>
+    <color name="color4">#191919</color>
+    <color name="color5">#191919</color>
+    <color name="color6">#191919</color>
+    <color name="color7">#191919</color>
+    <color name="color8">#191919</color>
+    <color name="color9">#191919</color>
+    <color name="color10">#191919</color>
+    <color name="color11">#191919</color>
+    <color name="color12">#191919</color>
+    <color name="color13">#191919</color>
+    <color name="color14">#191919</color>
+    <color name="color15">#191919</color>
+    <color name="color16">#191919</color>
+    <color name="color17">#191919</color>
+    <color name="color18">#191919</color>
+    <color name="color19">#191919</color>
+    <color name="color01">#191919</color>
+    <color name="color02">#191919</color>
+    <color name="color03">#191919</color>
+    <color name="color04">#191919</color>
+
+
+    <color name="sub_color">#6AF1E5</color>
+    <color name="sub_color2">#BAFAF4</color>
+    <color name="sub_color1">#6AF1E5</color>
+    <color name="card_white">#191919</color>
+
+</resources>

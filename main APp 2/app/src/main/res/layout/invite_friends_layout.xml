@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="400dp"
+    android:layout_height="700dp"
+    android:layout_gravity="center"
+    android:background="@drawable/shape"
+    android:backgroundTint="@color/light_purple"
+    android:padding="5dp"
+
+    tools:context=".inapprewardsysytem.inapprewardsysytem.Invite_Freiends">
+
+
+    <!-- Close button at the top right corner -->
+    <ImageView
+        android:id="@+id/closeButtonInvitefrnds"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="close_button"
+        android:src="@drawable/baseline_close_24"
+        app:tint="@color/dark_purple" />
+
+    <!-- Title and subtitle -->
+
+
+    <!-- Invite description with ImageView to the right -->
+    <LinearLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="271dp"
+        android:layout_height="39dp"
+
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Invite Friends"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="to win rewards"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/dark_purple" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/inviteDescriptionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/titleLayout"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/shape"
+        android:backgroundTint="@color/dark_purple"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/inviteDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create AI Genie"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/inviteDescriptionIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rpa_robotic_process_automation_icon"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <!-- Invite by email section -->
+    <LinearLayout
+        android:id="@+id/inviteByEmailSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inviteDescriptionLayout"
+        android:orientation="vertical"
+        android:background="@drawable/shape"
+        android:padding="16dp"
+        android:backgroundTint="@color/medium_purple"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Invite By Email"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Friends E-mail"
+            android:background="@drawable/shape"
+            android:backgroundTint="@color/white"
+            android:padding="12dp"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/yellow"
+            android:layout_gravity="center"
+            android:text="Invite"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:padding="12dp" />
+    </LinearLayout>
+
+    <!-- Invite by link section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inviteByEmailSection"
+        android:orientation="vertical"
+        android:background="@drawable/shape"
+        android:backgroundTint="@color/medium_purple"
+        android:padding="16dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Invite By Link"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Link"
+            android:background="@drawable/shape"
+            android:backgroundTint="@color/white"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/yellow"
+            android:text="Copy"
+            android:layout_gravity="center"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:padding="12dp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

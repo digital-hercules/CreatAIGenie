@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.home.view.ImageGenerationResultActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/image_generate"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:padding="6dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textSize="18dp"
+            android:fontFamily="@font/poppins_regular"
+            />
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/back"
+            android:padding="8dp"
+            android:layout_centerVertical="true"
+            app:tint="@color/black" />
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        android:orientation="vertical">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:shapeAppearanceOverlay="@style/roundedCornersImageView"
+            android:src="@drawable/image"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/tvRegenerate"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/bg_round_corners_gradiant"
+            android:backgroundTint="@color/main_color"
+            android:text="@string/re_generate"
+            android:textColor="@color/white_text"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginVertical="20dp"
+            android:textAllCaps="false"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="4dp"
+            android:elevation="4dp"
+            app:cardBackgroundColor="@color/light_gray"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:padding="12dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Creating a visually enchanting moment of elegance."
+                    android:textColor="@color/black"
+                    android:padding="3dp"
+                    android:gravity="center"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/poppins_regular"
+                    />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/llRepeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_gradiant"
+            android:backgroundTint="@color/et_color"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/repeat"
+                android:padding="5dp"
+                app:tint="@color/black_text" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Repeat the Prompt"
+                android:textColor="@color/black_text"
+                android:padding="6dp"
+                android:textSize="15dp"
+                android:fontFamily="@font/poppins_regular"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llDownload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_gradiant"
+            android:backgroundTint="@color/et_color"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/download_image"
+                android:padding="5dp"
+                app:tint="@color/black_text" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Downloaded"
+                android:textColor="@color/black_text"
+                android:padding="6dp"
+                android:textSize="15dp"
+                android:fontFamily="@font/poppins_regular"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:background="@drawable/bg_round_corner_black"
+            android:text="@string/history"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:drawableRight="@drawable/history1"
+            android:drawableTint="@color/black"
+            android:drawablePadding="10dp"
+            android:textSize="18dp"
+            android:paddingHorizontal="20dp"
+            android:fontFamily="@font/poppins_regular"
+            />
+
+        <TextView
+            android:id="@+id/tvGenerate"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/bg_round_corners_gradiant"
+            android:backgroundTint="@color/main_color"
+            android:text="@string/generate_another_image"
+            android:textColor="@color/white_text"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginVertical="20dp"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

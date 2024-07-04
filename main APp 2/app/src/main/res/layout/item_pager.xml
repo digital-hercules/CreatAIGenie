@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="right"
+
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/monthly"
+            android:textColor="@color/sub_color"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_regular"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:switchMinWidth="56dp"
+            android:text=""
+            android:checked="false"
+            app:trackTint="@color/switch_track_selector"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yearly"
+            android:textColor="@color/sub_color"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_regular"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlProPlan"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_below="@+id/llPlan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/bg_gradiant"
+            android:backgroundTint="@color/black"
+            android:layout_marginTop="-25dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pro_plan_offer1"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color1"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textSize="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="2dp"
+                    android:src="@drawable/tick"
+                    android:tint="@color/sub_color"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pro_plan_offer2"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color1"
+                    android:layout_marginHorizontal="10dp"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="2dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="2dp"
+                    android:src="@drawable/tick"
+                    android:tint="@color/sub_color"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pro_plan_offer3"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color1"
+                    android:layout_marginHorizontal="10dp"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="2dp"
+                    android:src="@drawable/tick"
+                    android:tint="@color/sub_color"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pro_plan_offer4"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color1"
+                    android:layout_marginHorizontal="10dp"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="2dp"
+                    android:src="@drawable/tick"
+                    android:tint="@color/sub_color"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pro_plan_offer5"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color1"
+                    android:layout_marginHorizontal="10dp"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="2dp"
+                    android:src="@drawable/tick"
+                    android:tint="@color/sub_color"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pro_plan_offer6"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color1"
+                    android:layout_marginHorizontal="10dp"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="2dp"
+                    android:src="@drawable/tick"
+                    android:tint="@color/sub_color"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pro_plan_offer7"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color1"
+                    android:layout_marginHorizontal="10dp"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llPlan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_gradiant"
+            android:padding="20dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pro_plan"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="24dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvProPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$49"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="24dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" /month"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18dp"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvProYearlyPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$432 / year"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/white"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/tvProSaving"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="You save $156 a year"
+                android:fontFamily="@font/poppins_regular"
+                android:background="@drawable/bg_round_corners_gradiant"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18dp"/>
+
+
+            <TextView
+                android:id="@+id/tvProUpgrade"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/bg_round_corners_gradiant"
+                android:text="@string/upgrade"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingRight="10dp"
+                android:textSize="18dp"
+                android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:drawableTint="@color/white"
+                android:fontFamily="@font/poppins_regular"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlStarter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_below="@+id/llStarter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/bg_gradiant"
+            android:backgroundTint="@color/black"
+            android:layout_marginTop="-20dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/starter1"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color1"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textSize="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="2dp"
+                    android:src="@drawable/tick"
+                    android:tint="@color/sub_color"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/starter2"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color1"
+                    android:layout_marginHorizontal="10dp"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="2dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="2dp"
+                    android:src="@drawable/tick"
+                    android:tint="@color/sub_color"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/starter3"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color1"
+                    android:layout_marginHorizontal="10dp"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="2dp"
+                    android:src="@drawable/tick"
+                    android:tint="@color/sub_color"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/starter4"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color1"
+                    android:layout_marginHorizontal="10dp"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="2dp"
+                    android:src="@drawable/tick"
+                    android:tint="@color/sub_color"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/starter5"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color1"
+                    android:layout_marginHorizontal="10dp"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llStarter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_gradiant"
+            android:padding="20dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/starter"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="24dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvStarterPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$20"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="24dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" /month"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvStarterYearlyPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$180 / year"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/white"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/tvStarterSaving"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="You save $60 a year"
+                android:fontFamily="@font/poppins_regular"
+                android:background="@drawable/bg_round_corners_gradiant"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18dp"/>
+
+
+            <TextView
+                android:id="@+id/tvStarterUpgrade"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/bg_round_corners_gradiant"
+                android:text="@string/upgrade"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingRight="10dp"
+                android:textSize="18dp"
+                android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:drawableTint="@color/white"
+                android:fontFamily="@font/poppins_regular"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlWords"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_below="@+id/llWords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/bg_gradiant"
+            android:backgroundTint="@color/black"
+            android:layout_marginTop="-20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/word2"
+                android:textColor="@color/color1"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="2dp"
+                    android:src="@drawable/plus"
+                    android:tint="@color/sub_color"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/word3"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color1"
+                    android:layout_marginHorizontal="10dp"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="2dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="2dp"
+                    android:src="@drawable/tick"
+                    android:tint="@color/sub_color"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/word4"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color1"
+                    android:layout_marginHorizontal="10dp"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="2dp"
+                    android:src="@drawable/tick"
+                    android:tint="@color/sub_color"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/word5"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color1"
+                    android:layout_marginHorizontal="10dp"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="2dp"
+                    android:src="@drawable/tick"
+                    android:tint="@color/sub_color"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/word6"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color1"
+                    android:layout_marginHorizontal="10dp"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="2dp"
+                    android:src="@drawable/tick"
+                    android:tint="@color/sub_color"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/word7"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color1"
+                    android:layout_marginHorizontal="10dp"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llWords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_gradiant"
+            android:padding="20dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/word1"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="24dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivMinus"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/minus"
+                    android:background="@drawable/bg_round_more"
+                    android:backgroundTint="@color/transparent"
+                    android:padding="10dp"
+                    android:tint="@color/white"
+                    />
+                <TextView
+                    android:id="@+id/tvWords"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3,000 words"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18dp"/>
+                <ImageView
+                    android:id="@+id/ivAdd"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/plus"
+                    android:background="@drawable/bg_round_more"
+                    android:backgroundTint="@color/transparent"
+                    android:padding="10dp"
+                    android:tint="@color/white"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="6dp"
+                android:background="@color/white"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_order"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18dp"/>
+                <TextView
+                    android:id="@+id/tvWordPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$20"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="22dp"/>
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/tvWordUpgrade"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/bg_round_corners_gradiant"
+                android:text="@string/upgrade"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingRight="10dp"
+                android:textSize="18dp"
+                android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:drawableTint="@color/white"
+                android:fontFamily="@font/poppins_regular"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
