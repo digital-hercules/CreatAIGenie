@@ -1,16 +1,27 @@
 # aigeniog
 
-A new Flutter project.
+Create new project using command 
 
-## Getting Started
+```
+flutter create new_project_name
+```
 
-This project is a starting point for a Flutter application.
+# download zip or git clone this repo
 
-A few resources to get you started if this is your first Flutter project:
+```
+git clone
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# move this lib dir to files into that new project
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Run flutter project
+
+```
+flutter run
+```
+
+# If problem occurs then run
+
+```
+flutter doctor
+```
