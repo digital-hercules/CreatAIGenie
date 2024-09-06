@@ -9,7 +9,7 @@ flutter create new_project_name
 # download zip or git clone this repo
 
 ```
-git clone
+git clone https://github.com/digital-hercules/CreatAIGenie/tree/siddhant_prathmesh_app/flutter_app_createaigenie
 ```
 
 # move this lib dir to files into that new project
