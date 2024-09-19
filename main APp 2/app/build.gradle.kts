@@ -127,7 +127,7 @@ dependencies {
     implementation( "com.isseiaoki:simplecropview:1.1.8")
     implementation( "com.agrawalsuneet.androidlibs:dotsloader:1.4")
     implementation( "androidx.multidex:multidex:2.0.1")
-    classpath 'com.android.tools.build:gradle:8.0.2'
+  
 
     // Java language implementation
     implementation("androidx.preference:preference:1.2.1")
