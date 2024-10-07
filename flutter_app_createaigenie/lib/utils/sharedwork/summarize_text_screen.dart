@@ -1,5 +1,7 @@
+import 'dart:convert'; // For JSON encoding and decoding
 import 'package:flutter/material.dart';
-import '../../beint/api_service.dart';
+import 'package:http/http.dart' as http; // For HTTP requests
+import '../../beint/api_service.dart'; // Ensure you have the correct path
 
 class SummarizeTextScreen extends StatefulWidget {
   const SummarizeTextScreen({super.key});
@@ -22,7 +24,7 @@ class _SummarizeTextScreenState extends State<SummarizeTextScreen> {
 
     final token = await _apiService.getToken();
     if (token != null) {
-      final summary = await _apiService.summarizeText(token, _textController.text);
+      final summary = await summarizeText(token, _textController.text);
       setState(() {
         _summary = summary;
       });
@@ -35,6 +37,35 @@ class _SummarizeTextScreenState extends State<SummarizeTextScreen> {
     setState(() {
       _loading = false;
     });
+  }
+
+  Future<String?> summarizeText(String token, String text) async {
+    const String baseUrl = 'http://192.168.1.12:8000'; // Update with your actual API URL
+    try {
+      final response = await http.post(
+        Uri.parse('$baseUrl/summarize/'), // Update this endpoint as needed
+        headers: {
+          'Authorization': 'Bearer $token',
+          'Content-Type': 'application/json; charset=UTF-8',
+        },
+        body: jsonEncode({'text': text}), // Ensure your API expects this structure
+      );
+
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body);
+        return data['summary']; // Adjust based on your API's response structure
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Failed to summarize text')),
+        );
+      }
+    } catch (e) {
+      print('Error during summary request: $e');
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('An error occurred')),
+      );
+    }
+    return null;
   }
 
   @override
@@ -79,13 +110,13 @@ class _SummarizeTextScreenState extends State<SummarizeTextScreen> {
               ),
               child: _loading
                   ? const SizedBox(
-                      height: 20,
-                      width: 20,
-                      child: CircularProgressIndicator(
-                        strokeWidth: 2,
-                        valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
-                      ),
-                    )
+                height: 20,
+                width: 20,
+                child: CircularProgressIndicator(
+                  strokeWidth: 2,
+                  valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
+                ),
+              )
                   : const Text('Summarize'),
             ),
             const SizedBox(height: 20),

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "998366769861",
+    "firebase_url": "https://ai-master-43e94-default-rtdb.firebaseio.com",
+    "project_id": "ai-master-43e94",
+    "storage_bucket": "ai-master-43e94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998366769861:android:4e91a6c536224687d076ac",
+        "android_client_info": {
+          "package_name": "com.example.create_ai_genie"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlBJoIY8RqrOhXJRx3xH30aKSMsEghxt8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

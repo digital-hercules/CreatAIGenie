@@ -3,22 +3,26 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 class ApiService {
-  static const String baseUrl = 'http://192.168.1.12:8000';  // Replace with your actual base URL
+  static const String baseUrl = 'http://48.216.211.10:8000/'; // Replace with your actual base URL
 
   // Function to log in and get JWT token
   Future<String?> login(String email, String password) async {
     try {
+      // Send HTTP POST request
       final response = await http.post(
         Uri.parse('$baseUrl/auth/jwt/create/'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({'email': email, 'password': password}),
       );
 
+      // Check for successful response
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
-        final token = data['access'];  // Return JWT token
+        final token = data['access']; // Return JWT token
+
+        // Store token in SharedPreferences
         final prefs = await SharedPreferences.getInstance();
-        await prefs.setString('jwt_token', token);  // Save token in SharedPreferences
+        await prefs.setString('jwt_token', token); // Save token in SharedPreferences
         return token;
       } else {
         print('Login failed with status: ${response.statusCode}');
@@ -30,6 +34,7 @@ class ApiService {
       return null;
     }
   }
+
 
   // Function to summarize text and return summary
   Future<String?> summarizeText(String token, String text) async {
@@ -103,7 +108,7 @@ class ApiService {
 
         return keywords;
       } else {
-        print('Extraction keywords failed: ${response.statusCode}');
+        print('Extraction of keywords failed: ${response.statusCode}');
         print('Response body: ${response.body}');
         return null;
       }
@@ -126,7 +131,7 @@ class ApiService {
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
-        return (data['results'] as List).cast<Map<String, dynamic>>();
+        return (data['results'] as List).cast<Map<String, dynamic>>(); // Cast to List<Map<String, dynamic>>
       } else {
         print('Failed to retrieve signage templates: ${response.statusCode}');
         print('Response body: ${response.body}');
@@ -157,7 +162,7 @@ class ApiService {
       return null;
     }
   }
-  
+
   // Function to retrieve a signage template by its ID
   Future<Map<String, dynamic>?> getSignageTemplateById(String token, String id) async {
     try {

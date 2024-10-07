@@ -1,6 +1,6 @@
-import 'package:aigeniog/utils/constants/responive.dart';
-import 'package:aigeniog/utils/extensions/screen_util_extension.dart';
-import 'package:aigeniog/utils/extensions/text_style_extension.dart';
+import 'package:create_ai_genie/utils/constants/responive.dart';
+import 'package:create_ai_genie/utils/extensions/screen_util_extension.dart';
+import 'package:create_ai_genie/utils/extensions/text_style_extension.dart';
 import 'package:flutter/material.dart';
 
 import '../../../utils/constants/scale_factor.dart';

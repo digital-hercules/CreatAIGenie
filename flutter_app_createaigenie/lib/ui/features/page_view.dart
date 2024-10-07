@@ -1,7 +1,7 @@
-import 'package:aigeniog/ui/features/feature1.dart';
-import 'package:aigeniog/ui/features/feature2.dart';
-import 'package:aigeniog/ui/features/feature3.dart';
-import 'package:aigeniog/ui/features/feature4.dart';
+import 'package:create_ai_genie/ui/features/feature1.dart';
+import 'package:create_ai_genie/ui/features/feature2.dart';
+import 'package:create_ai_genie/ui/features/feature3.dart';
+import 'package:create_ai_genie/ui/features/feature4.dart';
 import 'package:flutter/material.dart';
 
 

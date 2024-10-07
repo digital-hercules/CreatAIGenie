@@ -1,7 +1,7 @@
-import 'package:aigeniog/ui/welcome_screen/welcome_screen.dart';
-import 'package:aigeniog/utils/constants/app_spacer_constants.dart';
-import 'package:aigeniog/utils/extensions/screen_util_extension.dart';
-import 'package:aigeniog/utils/extensions/text_style_extension.dart';
+import 'package:create_ai_genie/ui/welcome_screen/welcome_screen.dart';
+import 'package:create_ai_genie/utils/constants/app_spacer_constants.dart';
+import 'package:create_ai_genie/utils/extensions/screen_util_extension.dart';
+import 'package:create_ai_genie/utils/extensions/text_style_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

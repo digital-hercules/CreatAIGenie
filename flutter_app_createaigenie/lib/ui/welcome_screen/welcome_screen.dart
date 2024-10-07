@@ -1,6 +1,6 @@
-import 'package:aigeniog/ui/user_selection/user_selection.dart';
-import 'package:aigeniog/utils/extensions/screen_util_extension.dart';
-import 'package:aigeniog/utils/extensions/text_style_extension.dart';
+import 'package:create_ai_genie/ui/user_selection/user_selection.dart';
+import 'package:create_ai_genie/utils/extensions/screen_util_extension.dart';
+import 'package:create_ai_genie/utils/extensions/text_style_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';

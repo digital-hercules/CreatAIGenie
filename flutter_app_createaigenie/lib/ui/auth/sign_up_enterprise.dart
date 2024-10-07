@@ -1,5 +1,5 @@
-import 'package:aigeniog/ui/common_widgets/round_button.dart';
-import 'package:aigeniog/utils/extensions/text_style_extension.dart';
+import 'package:create_ai_genie/ui/common_widgets/round_button.dart';
+import 'package:create_ai_genie/utils/extensions/text_style_extension.dart';
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';

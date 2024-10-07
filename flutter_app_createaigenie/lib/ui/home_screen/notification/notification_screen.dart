@@ -1,4 +1,4 @@
-import 'package:aigeniog/utils/extensions/text_style_extension.dart';
+import 'package:create_ai_genie/utils/extensions/text_style_extension.dart';
 import 'package:flutter/material.dart';
 
 import '../../../utils/constants/app_spacer_constants.dart';

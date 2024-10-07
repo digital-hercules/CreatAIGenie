@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:aigeniog/ui/home_screen/my_rewards/My_Rewards.dart';
-import 'package:aigeniog/ui/home_screen/profile_screen/profile_screen.dart';
-import 'package:aigeniog/utils/extensions/text_style_extension.dart';
-import 'package:aigeniog/ui/home_screen/brand_voice_screen/brand_voice_screen.dart';
+import 'package:create_ai_genie/ui/home_screen/my_rewards/My_Rewards.dart';
+import 'package:create_ai_genie/ui/home_screen/profile_screen/profile_screen.dart';
+import 'package:create_ai_genie/utils/extensions/text_style_extension.dart';
+import 'package:create_ai_genie/ui/home_screen/brand_voice_screen/brand_voice_screen.dart';
+import 'package:create_ai_genie/ui/auth/login.dart'; // Import your LoginScreen here
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -188,7 +189,13 @@ class CustomDrawer extends StatelessWidget {
       ),
       child: TextButton(
         onPressed: () {
-          // Handle logout action
+          // Handle logout action here
+          // For example, clear user session data if any
+
+          // Navigate to login page
+          Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => const Login()),
+          );
         },
         child: const Row(
           mainAxisAlignment: MainAxisAlignment.center,

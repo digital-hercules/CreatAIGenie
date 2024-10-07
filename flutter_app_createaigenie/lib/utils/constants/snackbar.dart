@@ -1,5 +1,5 @@
 
-import 'package:aigeniog/utils/constants/textStyles.dart';
+import 'package:create_ai_genie/utils/constants/textStyles.dart';
 import 'package:flutter/material.dart';
 import 'app_spacer_constants.dart';
 // Define a function to create a custom SnackBar with dynamic text.

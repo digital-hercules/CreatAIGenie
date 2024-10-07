@@ -1,16 +1,20 @@
+import 'package:create_ai_genie/ui/home_screen/ADs/ADs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
+
 // UI Screens
-import 'package:aigeniog/ui/features/page_view.dart';
+import 'package:create_ai_genie/ui/features/page_view.dart';
 import './ui/home_screen/home_screen.dart';
 import './ui/auth/login.dart';
-import './ui/home_screen/adscopy/create_ads.dart';
+
+
+
 
 // Utils and Shared Work
-import 'package:aigeniog/utils/theme/themes.dart';
+import 'package:create_ai_genie/utils/theme/themes.dart';
 import 'utils/sharedwork/summarize_text_screen.dart';
 import 'utils/sharedwork/generate_image_screen.dart';
 import 'utils/sharedwork/signage_templates_screen.dart';
@@ -58,13 +62,13 @@ class MyApp extends StatelessWidget {
           routes: {
             Routes.login: (context) => const Login(),
             Routes.home: (context) => const HomeScreen(),
-            Routes.summarizeText: (context) => SummarizeTextScreen(),
-            Routes.generateImage: (context) => GenerateImageScreen(),
-            Routes.signageTemplates: (context) => SignageTemplatesScreen(),
-            Routes.signageDetail: (context) => SignageTemplateDetailScreen(),
-            Routes.adsToKeywords: (context) => CreateAds(),
-            Routes.uploadFile: (context) => FileUploadScreen(),
-            Routes.textToSpeech: (context) => TextToSpeechScreen(),
+            Routes.summarizeText: (context) => const SummarizeTextScreen(),
+            Routes.generateImage: (context) => const GenerateImageScreen(),
+            Routes.signageTemplates: (context) => const SignageTemplatesScreen(),
+            Routes.signageDetail: (context) => const SignageTemplateDetailScreen(),
+            Routes.adsToKeywords: (context) =>  ADs(),
+            Routes.uploadFile: (context) => const FileUploadScreen(),
+            Routes.textToSpeech: (context) => const TextToSpeechScreen(),
             Routes.pageView: (context) => const PageViewFlutter(),
           },
         );
@@ -76,7 +80,7 @@ class MyApp extends StatelessWidget {
 class ErrorScreen extends StatelessWidget {
   final String error;
 
-  const ErrorScreen({Key? key, required this.error}) : super(key: key);
+  const ErrorScreen({super.key, required this.error});
 
   @override
   Widget build(BuildContext context) {

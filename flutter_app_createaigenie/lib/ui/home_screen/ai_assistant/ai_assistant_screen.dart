@@ -1,4 +1,4 @@
-import 'package:aigeniog/ui/home_screen/ai_assistant/feature_card.dart';
+import 'package:create_ai_genie/ui/home_screen/ai_assistant/feature_card.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 

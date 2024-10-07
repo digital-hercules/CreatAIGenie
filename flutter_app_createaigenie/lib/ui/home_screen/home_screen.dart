@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
-import 'package:aigeniog/ui/home_screen/notification/notification_screen.dart';
-import 'package:aigeniog/utils/extensions/screen_util_extension.dart';
-import 'package:aigeniog/utils/extensions/text_style_extension.dart';
+import 'package:create_ai_genie/ui/home_screen/notification/notification_screen.dart';
+import 'package:create_ai_genie/utils/extensions/screen_util_extension.dart';
+import 'package:create_ai_genie/utils/extensions/text_style_extension.dart';
 import 'drawer.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -245,13 +245,13 @@ class HomeScreen extends StatelessWidget {
   }
 
   Widget _buildFeatureItem(
-    String title,
-    String description,
-    IconData icon,
-    Color color,
-    String route,
-    BuildContext context,
-  ) {
+      String title,
+      String description,
+      IconData icon,
+      Color color,
+      String route,
+      BuildContext context,
+      ) {
     return GestureDetector(
       onTap: () {
         Navigator.pushNamed(context, route);

@@ -1,9 +1,9 @@
-import 'package:aigeniog/ui/auth/login.dart';
-import 'package:aigeniog/ui/auth/sign_up_creator.dart';
-import 'package:aigeniog/ui/auth/sign_up_enterprise.dart';
-import 'package:aigeniog/ui/auth/sign_up_user.dart';
-import 'package:aigeniog/utils/extensions/screen_util_extension.dart';
-import 'package:aigeniog/utils/extensions/text_style_extension.dart';
+import 'package:create_ai_genie/ui/auth/login.dart';
+import 'package:create_ai_genie/ui/auth/sign_up_creator.dart';
+import 'package:create_ai_genie/ui/auth/sign_up_enterprise.dart';
+import 'package:create_ai_genie/ui/auth/sign_up_user.dart';
+import 'package:create_ai_genie/utils/extensions/screen_util_extension.dart';
+import 'package:create_ai_genie/utils/extensions/text_style_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

@@ -1,5 +1,5 @@
-import 'package:aigeniog/utils/theme/custom_theme/text_theme.dart';
-import 'package:aigeniog/utils/theme/custom_theme/textinput_theme.dart';
+import 'package:create_ai_genie/utils/theme/custom_theme/text_theme.dart';
+import 'package:create_ai_genie/utils/theme/custom_theme/textinput_theme.dart';
 import 'package:flutter/material.dart';
 
 class TAppTheme {
