@@ -11,7 +11,7 @@ import '../home_screen/home.dart';
 import 'login.dart';
 
 // Define your API base URL here
-const String baseUrl = 'http://48.216.211.10:8000/'; // Replace with actual base URL
+const String baseUrl = ''; // Replace with actual base URL
 
 class SignUpUser extends StatefulWidget {
   const SignUpUser({super.key});
@@ -283,6 +283,8 @@ class _SignUpUserState extends State<SignUpUser> {
         showProgress = true;
       });
 
+      // Commented out the API call to bypass sign-up logic
+      /*
       final success = await signUp(
         emailController.text,
         passwordController.text,
@@ -301,6 +303,10 @@ class _SignUpUserState extends State<SignUpUser> {
           SnackBar(content: Text('Sign Up failed. Please try again.')),
         );
       }
+      */
+
+      // Automatically navigate to the Home page on form submission
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Home()));
     }
   }
 

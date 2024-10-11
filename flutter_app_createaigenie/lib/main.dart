@@ -4,14 +4,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
-
 // UI Screens
 import 'package:create_ai_genie/ui/features/page_view.dart';
 import './ui/home_screen/home_screen.dart';
 import './ui/auth/login.dart';
-
-
-
 
 // Utils and Shared Work
 import 'package:create_ai_genie/utils/theme/themes.dart';
@@ -55,18 +51,19 @@ class MyApp extends StatelessWidget {
       builder: (_, child) {
         return MaterialApp(
           title: 'AI Operations',
+          debugShowCheckedModeBanner: false, // Disable the debug banner
           themeMode: ThemeMode.system,
           theme: TAppTheme.lightTheme,
           darkTheme: TAppTheme.darkTheme, // Assuming you have defined TAppTheme.darkTheme
           initialRoute: Routes.login,
           routes: {
             Routes.login: (context) => const Login(),
-            Routes.home: (context) =>  HomeScreen(),
-            Routes.summarizeText: (context) => const SummarizeTextScreen(),
+            Routes.home: (context) => const HomeScreen(),
+            Routes.summarizeText: (context) => SummarizeTextScreen(),
             Routes.generateImage: (context) => const GenerateImageScreen(),
             Routes.signageTemplates: (context) => const SignageTemplatesScreen(),
             Routes.signageDetail: (context) => const SignageTemplateDetailScreen(),
-            Routes.adsToKeywords: (context) =>  ADs(),
+            Routes.adsToKeywords: (context) => ADs(),
             Routes.uploadFile: (context) => const FileUploadScreen(),
             Routes.textToSpeech: (context) => const TextToSpeechScreen(),
             Routes.pageView: (context) => const PageViewFlutter(),

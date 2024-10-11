@@ -1,20 +1,18 @@
-import 'dart:convert'; // For JSON encoding and decoding
+import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http; // For HTTP requests
-import '../../beint/api_service.dart'; // Ensure you have the correct path
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:http/http.dart' as http;
 
 class SummarizeTextScreen extends StatefulWidget {
-  const SummarizeTextScreen({super.key});
-
   @override
   _SummarizeTextScreenState createState() => _SummarizeTextScreenState();
 }
 
 class _SummarizeTextScreenState extends State<SummarizeTextScreen> {
-  final _textController = TextEditingController();
+  final TextEditingController _textController = TextEditingController();
   String? _summary;
-  final ApiService _apiService = ApiService();
   bool _loading = false;
+  final ApiService _apiService = ApiService();
 
   Future<void> _summarizeText() async {
     setState(() {
@@ -22,50 +20,24 @@ class _SummarizeTextScreenState extends State<SummarizeTextScreen> {
       _summary = null;
     });
 
-    final token = await _apiService.getToken();
-    if (token != null) {
-      final summary = await summarizeText(token, _textController.text);
-      setState(() {
-        _summary = summary;
-      });
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Failed to get token')),
-      );
-    }
-
-    setState(() {
-      _loading = false;
-    });
-  }
-
-  Future<String?> summarizeText(String token, String text) async {
-    const String baseUrl = 'http://192.168.1.12:8000'; // Update with your actual API URL
     try {
-      final response = await http.post(
-        Uri.parse('$baseUrl/summarize/'), // Update this endpoint as needed
-        headers: {
-          'Authorization': 'Bearer $token',
-          'Content-Type': 'application/json; charset=UTF-8',
-        },
-        body: jsonEncode({'text': text}), // Ensure your API expects this structure
-      );
-
-      if (response.statusCode == 200) {
-        final data = jsonDecode(response.body);
-        return data['summary']; // Adjust based on your API's response structure
+      final summary = await _apiService.summarizeText(_textController.text);
+      if (summary != null) {
+        setState(() {
+          _summary = summary;
+        });
       } else {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Failed to summarize text')),
-        );
+        throw Exception('Failed to summarize text');
       }
     } catch (e) {
-      print('Error during summary request: $e');
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('An error occurred')),
+        SnackBar(content: Text(e.toString())),
       );
+    } finally {
+      setState(() {
+        _loading = false;
+      });
     }
-    return null;
   }
 
   @override
@@ -73,76 +45,74 @@ class _SummarizeTextScreenState extends State<SummarizeTextScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Summarize Text'),
-        centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const Text(
-              'Enter the text you want to summarize:',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 10),
             TextField(
               controller: _textController,
-              decoration: InputDecoration(
-                hintText: 'Enter your text here...',
-                filled: true,
-                fillColor: Colors.grey[200],
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-              ),
+              decoration: const InputDecoration(labelText: 'Enter text to summarize'),
               maxLines: 5,
-              textInputAction: TextInputAction.newline,
             ),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: _loading ? null : _summarizeText,
-              style: ElevatedButton.styleFrom(
-                minimumSize: const Size(double.infinity, 50),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                backgroundColor: Colors.deepPurpleAccent, // Use backgroundColor instead of primary
-              ),
-              child: _loading
-                  ? const SizedBox(
-                height: 20,
-                width: 20,
-                child: CircularProgressIndicator(
-                  strokeWidth: 2,
-                  valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
-                ),
-              )
-                  : const Text('Summarize'),
+              onPressed: _summarizeText,
+              child: _loading ? const CircularProgressIndicator() : const Text('Summarize'),
             ),
             const SizedBox(height: 20),
-            if (_summary != null) ...[
-              Container(
-                padding: const EdgeInsets.all(16.0),
-                decoration: BoxDecoration(
-                  color: Colors.grey[100],
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Colors.black26,
-                      offset: Offset(0, 2),
-                      blurRadius: 6,
-                    ),
-                  ],
-                ),
-                child: Text(
-                  'Summary: $_summary',
-                  style: const TextStyle(fontSize: 16, fontStyle: FontStyle.italic),
-                ),
-              ),
-            ],
+            _summary != null
+                ? Text(
+              _summary!,
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            )
+                : Container(),
           ],
         ),
       ),
     );
+  }
+}
+
+class ApiService {
+  final String _baseUrl = 'http://48.216.211.10:8000';
+
+  // Fetch access token from SharedPreferences
+  Future<String?> _getAccessToken() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getString('accessToken');
+  }
+
+  // Function to summarize text using the stored token
+  Future<String?> summarizeText(String text) async {
+    try {
+      final token = await _getAccessToken();
+
+      if (token == null) {
+        throw Exception('No access token found');
+      }
+
+      final response = await http.post(
+        Uri.parse('$_baseUrl/summarize-text/'),
+        headers: {
+          'Authorization': 'Bearer $token',
+          'Content-Type': 'application/json',
+        },
+        body: jsonEncode({'text': text}),
+      );
+
+      print('Summarize Response body: ${response.body}');
+
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body);
+        return data['summary'];
+      } else {
+        print('Failed to summarize text: ${response.statusCode} - ${response.body}');
+        return null;
+      }
+    } catch (e) {
+      print('Error summarizing text: $e');
+      return null;
+    }
   }
 }

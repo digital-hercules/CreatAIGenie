@@ -4,6 +4,7 @@ import 'package:create_ai_genie/ui/home_screen/profile_screen/profile_screen.dar
 import 'package:create_ai_genie/utils/extensions/text_style_extension.dart';
 import 'package:create_ai_genie/ui/home_screen/brand_voice_screen/brand_voice_screen.dart';
 import 'package:create_ai_genie/ui/auth/login.dart'; // Import your LoginScreen here
+import 'package:shared_preferences/shared_preferences.dart'; // Import SharedPreferences
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -188,9 +189,14 @@ class CustomDrawer extends StatelessWidget {
         ],
       ),
       child: TextButton(
-        onPressed: () {
-          // Handle logout action here
-          // For example, clear user session data if any
+        onPressed: () async {
+          final prefs = await SharedPreferences.getInstance();
+          await prefs.remove('accessToken'); // Clear access token
+          await prefs.remove('refreshToken'); // Clear refresh token
+
+          // Debug print to check if tokens are removed
+          print('Access Token removed: ${prefs.getString('accessToken')}');
+          print('Refresh Token removed: ${prefs.getString('refreshToken')}');
 
           // Navigate to login page
           Navigator.of(context).pushReplacement(

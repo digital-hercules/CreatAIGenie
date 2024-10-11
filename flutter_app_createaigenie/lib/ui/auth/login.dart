@@ -1,14 +1,18 @@
+
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart'; // Import SharedPreferences
 import 'package:create_ai_genie/ui/common_widgets/round_button.dart';
 import 'package:create_ai_genie/ui/user_selection/user_selection.dart';
 import 'package:create_ai_genie/utils/extensions/text_style_extension.dart';
 import '../../utils/constants/app_spacer_constants.dart';
 import '../../utils/constants/scale_factor.dart';
 import '../home_screen/home.dart';
-import '../../beint/api_service.dart';
 import '../../beint/amazon_login.dart';
+import 'package:tutorial_coach_mark/tutorial_coach_mark.dart';
+
+import 'package:http/http.dart' as http;
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -26,9 +30,9 @@ class _LoginState extends State<Login> {
 
   // Initialize AmazonLogin instance
   final AmazonLogin amazonLogin = AmazonLogin(
-    clientId: 'amzn1.application-oa2-client.64825a3ddf7b4ea3bd5508830526f3e6',  // Replace with your Client ID
-    clientSecret: 'amzn1.oa2-cs.v1.198e0244fd3c2a53808c18c547b18b05b898fd31e6b8bdc3872ccabf86f68145',  // Replace with your Client Secret
-    redirectUri: 'https://creataigenie.com/auth',  // Replace with your Redirect URI
+    clientId: 'YOUR_CLIENT_ID', // Replace with your Client ID
+    clientSecret: 'YOUR_CLIENT_SECRET', // Replace with your Client Secret
+    redirectUri: 'https://creataigenie.com/auth', // Replace with your Redirect URI
   );
 
   @override
@@ -176,7 +180,7 @@ class _LoginState extends State<Login> {
           voidCallBack: _loading ? () {} : () => _login(emailController.text, passwordController.text),
         ),
         AppSpacer.p10(),
-        _buildAmazonLoginButton(),  // Amazon login button
+        _buildAmazonLoginButton(),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -242,7 +246,6 @@ class _LoginState extends State<Login> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
-            SizedBox(width: 0),
             Text(
               'Login with Amazon',
               style: TextStyle(
@@ -264,35 +267,83 @@ class _LoginState extends State<Login> {
         _loading = true;
       });
 
-      ApiService apiService = ApiService();
-
-      final token = await apiService.login(email, password);
-
-      setState(() {
-        _loading = false;
-      });
-
-      if (token != null) {
-        // Redirect to Home after successful login
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => const Home()),
+      try {
+        final response = await http.post(
+          Uri.parse('http://48.216.211.10:8000/auth/jwt/create/'), // Your API endpoint
+          headers: <String, String>{
+            'Content-Type': 'application/json; charset=UTF-8',
+          },
+          body: jsonEncode(<String, String>{
+            'email': email,
+            'password': password,
+          }),
         );
-      } else {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Login failed. Please try again.')),
-        );
+
+        print('Response status: ${response.statusCode}');
+        print('Response body: ${response.body}');
+
+        setState(() {
+          _loading = false;
+        });
+
+        if (response.statusCode == 200) {
+          final responseData = jsonDecode(response.body);
+
+          // Retrieve both tokens from the response
+          final String refreshToken = responseData['refresh'];
+          final String accessToken = responseData['access'];
+
+          // Debug print to confirm the tokens
+          print('Access Token: $accessToken');
+          print('Refresh Token: $refreshToken');
+
+          // Check if tokens are null before saving
+          if (accessToken != false && refreshToken != false) {
+            final prefs = await SharedPreferences.getInstance();
+            await prefs.setString('accessToken', accessToken);
+            await prefs.setString('refreshToken', refreshToken);
+
+            // Verify that tokens are saved
+            print('Tokens saved successfully');
+          } else {
+            print('Failed to retrieve tokens from response');
+            _showErrorMessage('Login failed. Please check your credentials.');
+            return;
+          }
+
+          // Redirect to Home after successful login
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => const Home()),
+          );
+        } else {
+          _showErrorMessage('Login failed. Please check your credentials.');
+        }
+      } catch (e) {
+        setState(() {
+          _loading = false;
+        });
+        print('Error during login: $e');
+        _showErrorMessage('An error occurred. Please try again later.');
       }
     }
   }
 
   Future<void> _amazonLogin() async {
     await amazonLogin.signIn(context, () {
-      // Redirect to Home after successful Amazon login
+      // Redirect to Home on successful Amazon login
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => const Home()),
       );
     });
   }
-}
+
+  void _showErrorMessage(String message) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(message),
+      ),
+    );
+  }
+}  

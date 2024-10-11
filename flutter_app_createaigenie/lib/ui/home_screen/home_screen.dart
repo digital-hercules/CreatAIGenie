@@ -5,13 +5,22 @@ import 'package:create_ai_genie/utils/extensions/screen_util_extension.dart';
 import 'package:create_ai_genie/utils/extensions/text_style_extension.dart';
 import 'drawer.dart';
 
-class HomeScreen extends StatelessWidget {
-  // Global keys for specific widgets
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+
+
+class _HomeScreenState extends State<HomeScreen> {
+
+  //tutorial keys
   final GlobalKey _floatingButtonKey = GlobalKey();
   final GlobalKey _editButtonKey = GlobalKey();
   final GlobalKey _settingsButtonKey = GlobalKey();
 
-  HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,13 +39,11 @@ class HomeScreen extends StatelessWidget {
             context,
             HugeIcons.strokeRoundedSchoolBell01,
             const NotificationScreen(),
-            key: _editButtonKey, // Assign key to this action button
           ),
           _buildIconAction(
             context,
             HugeIcons.strokeRoundedSetting07,
             const NotificationScreen(),
-            key: _settingsButtonKey, // Assign key to this action button
           ),
         ],
         elevation: 0,
@@ -60,19 +67,11 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        key: _floatingButtonKey, // Assign key to the floating action button
-        onPressed: () {
-          // Handle FAB action here
-        },
-        child: Icon(Icons.add),
-      ),
     );
   }
 
-  Widget _buildIconAction(BuildContext context, IconData icon, Widget destination, {Key? key}) {
+  Widget _buildIconAction(BuildContext context, IconData icon, Widget destination) {
     return GestureDetector(
-      key: key, // Use the provided key parameter here
       onTap: () {
         Navigator.push(
           context,
@@ -165,12 +164,12 @@ class HomeScreen extends StatelessWidget {
         children: [
           Text(
             'Start a Chat',
-            style: TextStyle(color: Color(0xffb219f0)),
+            style: const TextStyle(color: Color(0xffb219f0)),
           ),
           const SizedBox(width: 8),
           HugeIcon(
             icon: HugeIcons.strokeRoundedArrowAllDirection,
-            color: Color(0xffb219f0),
+            color: const Color(0xffb219f0),
             size: 24.0, // Adjust size as needed
           ),
         ],
@@ -247,11 +246,11 @@ class HomeScreen extends StatelessWidget {
               context,
             ),
             _buildFeatureItem(
-              'Text to Speech',
-              'Convert text to spoken words',
-              HugeIcons.strokeRoundedVoice,
-              const Color(0xff2cbc4c),
-              '/text-to-speech',
+              'Blog Post Generator',
+              'Write blog posts automatically',
+              HugeIcons.strokeRoundedDrawingCompass,
+              const Color(0xffe24d3b),
+              '/generate-blog',
               context,
             ),
           ],
@@ -329,8 +328,8 @@ class HomeScreen extends StatelessWidget {
             'File to Text Extraction',
             'Extract text from various file formats',
             HugeIcons.strokeRoundedFileAdd,
-            const Color(0xfff77b2a),
-            '/file-to-text',
+            const Color(0xffb219f0),
+            '/upload-file',
             context,
           ),
         ],

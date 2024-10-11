@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../beint/api_service.dart';
+import 'package:http/http.dart' as http; // Import http package
+import 'dart:convert'; // Import dart:convert for jsonDecode
+import 'package:shared_preferences/shared_preferences.dart'; // Import shared_preferences
 
 class GenerateImageScreen extends StatefulWidget {
   const GenerateImageScreen({super.key});
@@ -15,6 +17,13 @@ class _GenerateImageScreenState extends State<GenerateImageScreen> {
   final ApiService _apiService = ApiService();
 
   void _generateImage() async {
+    if (_promptController.text.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Please enter a prompt')),
+      );
+      return;
+    }
+
     setState(() {
       _loading = true;
       _imageUrl = null;
@@ -27,6 +36,12 @@ class _GenerateImageScreenState extends State<GenerateImageScreen> {
         _imageUrl = imageUrl;
         _loading = false;
       });
+
+      if (imageUrl == null) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Failed to generate image')),
+        );
+      }
     } else {
       setState(() {
         _loading = false;
@@ -35,6 +50,13 @@ class _GenerateImageScreenState extends State<GenerateImageScreen> {
         const SnackBar(content: Text('Failed to get token')),
       );
     }
+  }
+
+  void _clear() {
+    setState(() {
+      _promptController.clear();
+      _imageUrl = null;
+    });
   }
 
   @override
@@ -70,7 +92,7 @@ class _GenerateImageScreenState extends State<GenerateImageScreen> {
             ElevatedButton(
               onPressed: _loading ? null : _generateImage,
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.deepPurpleAccent, // Use backgroundColor instead of primary
+                backgroundColor: Colors.deepPurpleAccent,
                 minimumSize: const Size(double.infinity, 50),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12.0),
@@ -78,13 +100,13 @@ class _GenerateImageScreenState extends State<GenerateImageScreen> {
               ),
               child: _loading
                   ? const SizedBox(
-                      height: 20,
-                      width: 20,
-                      child: CircularProgressIndicator(
-                        color: Colors.black,
-                        strokeWidth: 2,
-                      ),
-                    )
+                height: 20,
+                width: 20,
+                child: CircularProgressIndicator(
+                  color: Colors.black,
+                  strokeWidth: 2,
+                ),
+              )
                   : const Text('Generate Image'),
             ),
             const SizedBox(height: 20),
@@ -100,10 +122,65 @@ class _GenerateImageScreenState extends State<GenerateImageScreen> {
                   ),
                 ),
               ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: _clear,
+                child: const Text('Clear'),
+              ),
             ],
           ],
         ),
       ),
     );
+  }
+}
+
+// API Service class for network operations
+class ApiService {
+  // Base URL for the API
+  final String _baseUrl = 'http://48.216.211.10:8000'; // Replace with your API base URL
+
+  // Fetches an authentication token
+  Future<String?> getToken() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      return prefs.getString('token'); // Retrieve the token from shared preferences
+    } catch (e) {
+      print('Error getting token: $e');
+      return null;
+    }
+  }
+
+  // Generates an image based on the prompt
+  Future<String?> generateImage(String token, String prompt) async {
+    try {
+      final response = await http.post(
+        Uri.parse('$_baseUrl/generate-image'), // Adjust the endpoint as needed
+        headers: {
+          'Authorization': 'Bearer $token',
+          'Content-Type': 'application/json',
+        },
+        body: jsonEncode({'prompt': prompt}), // Send the prompt in the request body
+      );
+
+      // Debugging line
+      print('Generate Image Response body: ${response.body}');
+
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body);
+        return data['imageUrl']; // Assuming the response contains 'imageUrl'
+      } else {
+        print('Failed to generate image: ${response.statusCode} - ${response.body}');
+        return null;
+      }
+    } catch (e) {
+      print('Error generating image: $e');
+      return null;
+    }
+  }
+
+  // Function to get the base URL (if needed)
+  String getBaseUrl() {
+    return _baseUrl;
   }
 }
