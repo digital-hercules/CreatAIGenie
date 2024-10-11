@@ -61,7 +61,7 @@ class MyApp extends StatelessWidget {
           initialRoute: Routes.login,
           routes: {
             Routes.login: (context) => const Login(),
-            Routes.home: (context) => const HomeScreen(),
+            Routes.home: (context) =>  HomeScreen(),
             Routes.summarizeText: (context) => const SummarizeTextScreen(),
             Routes.generateImage: (context) => const GenerateImageScreen(),
             Routes.signageTemplates: (context) => const SignageTemplatesScreen(),
